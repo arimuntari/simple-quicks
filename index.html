@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quicks</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="box-container">
+        <div class="input-group input-black mb-3">
+            <span class="input-group-text">
+                <img src="img/search_24px.svg">
+            </span>
+            <input type="text" class="form-control">
+        </div>
+        <div class="ui message">
+            <div class="box-ui">
+                <div class="input-group input-search mb-3">
+                    <input type="text" placeholder="search" class="form-control">
+                    <span class="input-group-text">
+                        <img src="img/search_12px.svg">
+                    </span>
+                </div>
+                <div class="box-message ">
+                    <div class="message-list">
+                        <div class="row mx-0 message-item">
+                            <div class="col-auto image-box">
+                                <div class="circle-image shadow"><img src="img/user-black.svg"/></div>
+                                <div class="circle-image main"><img src="img/user-white.svg"/></div>
+                            </div>
+                            <div class="col-md info-box">
+                                <div class="title">
+                                    <span class="text-title">109220-Naturalization </span>
+                                    <span class="text-date">January 1,2021 19:10</span>
+                                </div>
+                                <div class="subtitle">
+                                    <span class="text-name d-block "> Cameron Phillips:</span>
+                                    <span class="text-message">Hey, please read.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-0 message-item">
+                            <div class="col-auto image-box">
+                                <div class="circle-image shadow"><img src="img/user-black.svg"/></div>
+                                <div class="circle-image main"><img src="img/user-white.svg"/></div>
+                            </div>
+                            <div class="col-md info-box">
+                                <div class="title">
+                                    <span class="text-title">Jeannette Moraima Guaman Chamba (Hutto I-589) [ Hutto Follow Up - Brief Service ]</span>
+                                    <span class="text-date">02/06/2021 10:45</span>
+                                </div>
+                                <div class="subtitle">
+                                    <span class="text-name d-block ">  Ellen:</span>
+                                    <span class="text-message">Hey, please read.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-0 message-item">
+                            <div class="col-auto image-box">
+                                <div class="circle-image shadow"><img src="img/user-black.svg"/></div>
+                                <div class="circle-image main"><img src="img/user-white.svg"/></div>
+                            </div>
+                            <div class="col-md info-box">
+                                <div class="title">
+                                    <span class="text-title">8405-Diana SALAZAR MUNGUIA</span>
+                                    <span class="text-date">01/06/2021 12:19</span>
+                                </div>
+                                <div class="subtitle">
+                                    <span class="text-name d-block ">  Cameron Phillips:</span>
+                                    <span class="text-message">I understand your initial concerns and thats very valid, Elizabeth. But you ...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-0 message-item">
+                            <div class="col-auto image-box">
+                                <div class="circle-image one">F</div>
+                            </div>
+                            <div class="col-md info-box">
+                                <div class="title">
+                                    <span class="text-title">FastVisa Support</span>
+                                    <span class="text-date">01/06/2021 12:19</span>
+                                </div>
+                                <div class="subtitle">
+                                    <span class="text-message">Hey there! Welcome to your inbox.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spinner text-center">
+                        <img src="img/loading.svg">
+                        <div>Loading Chats...</div>
+                    </div>
+                </div>
+            </div>
+            <div class="icon-button-list active">
+                <div class="circle-icon">
+                    <img src="img/task.svg">
+                </div>
+                <div class="circle-icon message">
+                    <img src="img/message.svg">
+                </div>
+                <div class="circle-icon main">
+                    <img src="img/thunder.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+</body>
+<script>
+    var messageItem = [];
+    $(".circle-icon.main").click(function(){
+        $(".icon-button-list").toggleClass("active");
+    })
+    $(".circle-icon.message").click(function(){
+        $(".ui").toggleClass("message");
+        $(".box-message").addClass("loading");
+        setTimeout(function(){
+            $(".box-message").removeClass("loading");
+        }, 5000);
+    })
+
+    function buildItemMessage(){
+
+    }
+</script>
+</html>

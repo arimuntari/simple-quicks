@@ -1,0 +1,181 @@
+
+    html,body {
+        background-color: #333;
+        height: 100%;
+    }
+    .form-search{
+        background-color: #4f4f4f;
+    }
+    .box-container{
+        position: relative;
+        width: 90%;
+        max-width:1635px;
+        float:right;
+        border-left: 1px solid #f2f2f2;
+        height: 100%;
+    }
+    .input-black .input-group-text{
+        background-color: #4f4f4f;
+        border:0px;
+    }
+    .input-black .form-control{
+        background-color: #4f4f4f;
+        border: 0px;
+        color:#fff;
+    }
+    .input-black .form-control:active, .input-black .form-control:focus{
+        background-color: #4f4f4f;
+        border-color: none;
+        outline: 0;
+        box-shadow:none;
+    }
+    .icon-button-list{
+        position: absolute;
+        display: flex;
+        bottom:27px;
+        right: 34px;
+        gap: 26px;
+    }
+    .circle-icon{
+        border-radius: 50%;
+        width: 60px;
+        height:60px;
+        background-color: #fff;
+        margin:auto;
+        text-align: center;
+        line-height: 60px;
+        display: none;
+        cursor:pointer;
+    }
+    .icon-button-list.active .circle-icon{
+        display: block;
+    }
+    .circle-icon.main{
+        width: 68px;
+        height:68px;
+        background-color: #2F80ED;
+        line-height: 68px;
+        text-align: center;
+        display: block;
+    }
+    .ui.message .active .circle-icon.main{
+        display: none;
+    }
+    .box-ui{
+        width: 100%;
+        max-width: 734px;
+        height: 100%;
+        max-height: 737px;
+        background-color: #fff;
+        position: absolute;
+        bottom:110px;
+        right: 34px;
+        padding: 20px 34px;
+        box-shadow: 1px #bdbdbd;
+        display: none;
+    }
+    .ui.message .box-ui{
+        display: block;
+    }
+    .box-ui .input-search .form-control, .input-search .input-group-text{
+        border: 1px solid #828282;
+    }
+    .input-search{
+        border-radius: 5px;
+    }
+    .box-ui .input-search .input-group-text{
+        border-left: 0px;
+        background-color: #fff;
+        padding-right:58px
+    }
+    .box-ui .input-search .form-control{
+        border-right: 0px;
+        padding-left: 58px;
+    }
+    .input-search .form-control:active, .input-search .form-control:focus{
+        background-color: #fff;
+        border-color: none;
+        outline: 0;
+        box-shadow:none;
+    }
+    .spinner{
+        display: none;
+        position: absolute;
+        top: calc(50% - 43px);
+        left: calc(50% - 50px);
+    }
+    .spinner img{
+        animation: spin 2s linear infinite;
+    }
+    .box-message{
+        position: relative;
+        display: block;
+    }
+    .box-message.loading .box-message{
+        display: none;
+    }
+    .box-message.loading .spinner{
+        display: block;
+    }
+    .message-item{
+        position: relative;
+        display: flex;
+        padding: 26px 0px;
+    }
+    .message-item .image-box{
+        width: 51px;
+        position: relative;
+        margin-right: 17px;
+    }
+    .message-item:not(:last-child){
+        border-bottom: 1px solid #828282;
+    }
+    .circle-image{
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        text-align:center;
+        line-height: 30px;
+        position: absolute;
+    }
+    .circle-image.shadow{
+        z-index: 1;
+        left:0px;
+        background-color: #E0E0E0;
+    }
+    .circle-image.main{
+        z-index: 2;
+        right:0px;
+        background-color: #2F80ED;
+    }
+    .circle-image.one{
+        z-index: 2;
+        left:calc(50% - 17px);
+        background-color: #2F80ED;
+        color:#fff;
+        font-weight: bold;
+    }
+    .message-item .info-box{
+        display: block;
+        width: 100%;
+
+    }
+    .message-item .info-box .text-title{
+        font-size: 16px;
+        font-weight: bold;
+        color :#2F80ED;
+        display: inline-block;
+        vertical-align:top;
+        max-width: 400px;
+    }
+    .message-item .info-box .text-name{
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .message-item .info-box .text-message{
+        color:#4F4F4F;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
